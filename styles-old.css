@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: #565656;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(18, 10vh);
+    grid-template-rows: repeat(9, 10vh);
+    /* grid-gap: 1px; */
+    grid-gap: 0;
+    width: auto;
+    height: auto;
+  }
+  .grid > * {
+    background: #565656;
+  }
+
+  element-tile {
+      display: flex;
+      font-family: 'Assistant', sans-serif;
+      border-right: 1px solid rgba(255,255,255,0.5);
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+  }
+
+    element-tile.layout {
+        border-bottom: none;
+    }
+
+  element-content {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255,255,255,0.5);
+    flex-grow: 1;
+    padding: calc(10vh/20) calc(10vh/10);
+  }
+
+  atomic-number {
+    font-size: 2vh;
+    line-height: 1;
+  }
+
+  element-symbol {
+    text-align: center;
+    font-size: 5vh;
+    line-height: 1;
+    text-transform: capitalize;
+  }
+  element-name {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.4vh;
+    line-height: 1;
+    text-transform: capitalize;
+  }
+
+
+
+
+
+element-card {
+    display: flex;
+    flex-direction: column;
+    height: 90vw;
+    width: 90vw;
+    max-height: 40em;
+    max-width: 40em;
+    margin: calc((100vh - 30vh)/2) auto 0;
+    background: #efefef;
+}
+
+antes-top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2vh 1.5vh 1vh;
+}
+
+antes-top-row > atomic-number, element-info {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+top-row {
+    display: flex;
+    flex-direction: row;
+    padding: 0 1.5vh;
+}
+
+top-row > element-symbol {
+    font-size: 7vh;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+}
+
+element-name-and {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    margin-left: 2vh;
+    justify-content: center;
+}
+element-name-and > element-name {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Assistant', sans-serif;
+}
+
+element-image {
+    max-width: 100%;
+}
+element-image > img {
+    max-width: 100%;
+}
+
+
+/* colors */
+.alkali-metal {
+    background-color: #80120b;
+}
+.alkaline-earth {
+    background-color: #a73a33;
+}
+.transition-metal {
+    background-color: #545368;
+}
+.post-transition-metal {
+    background-color: #245024;
+}
+.metalloid {
+    background-color: #46828e;
+}
+.nonmetal {
+    background-color: #465e8e;
+}
+.halogen {
+    background-color: #5c4277;
+}
+.noble-gas {
+    background-color: #3e385f;
+}
+.lanthanide {
+    background-color: #7c5a5a;
+}
+.actinide {
+    background-color: #6d3f3f;
+}
+
+
+

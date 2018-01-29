@@ -47,12 +47,18 @@ function setMainTable(gridMap, gridData) {
         let elName = document.createElement("element-name");
         let elSymbol = document.createElement("element-symbol");
         let elNumber = document.createElement("atomic-number");
-        elName.textContent = ename;
-        elSymbol.textContent = esymbol;
-        elNumber.textContent = eatomic;
-        elementContent.appendChild(elNumber);
-        elementContent.appendChild(elSymbol);
-        elementContent.appendChild(elName);
+        // elName.textContent = ename;
+        // elSymbol.textContent = esymbol;
+        // elNumber.textContent = eatomic;
+        // elementContent.appendChild(elNumber);
+        // elementContent.appendChild(elSymbol);
+        // simplify above, maybe?
+        elementContent.innerHTML = `
+          <atomic-number>${eatomic}</atomic-number>
+          <element-symbol>${esymbol}</element-symbol>
+          <element-name>${ename}</element-name>
+        `;
+        //elementContent.appendChild(elName);
         elementTile.appendChild(elementContent);
         periodicGrid.appendChild(elementTile);
         j++;
@@ -140,6 +146,8 @@ function showElementCard(atomicNumber, elWidthHeight, elTop, elLeft) {
   let m = document.createElement("div");
   m.className = "modal-background";
   let c = document.createElement("element-card");
+  // NEED TO TEST ON MOBILE OR
+  // WHEN SCROLL IS NOT 0,0
   c.style.position = 'fixed';
   c.style.width = elWidthHeight+'px';
   c.style.height = elWidthHeight+'px';
